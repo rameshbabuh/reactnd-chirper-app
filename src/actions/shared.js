@@ -10,7 +10,7 @@ export function handleInitialData(){
         return getInitialData().then(({ users, tweets }) => {
             dispatch(receiveUsers(users))
             dispatch(receiveTweets(tweets))
-            dispatch(receiveTweets(AUTHED_ID))
+            dispatch(setAuthedUserId(AUTHED_ID))
         })
     }
 }
