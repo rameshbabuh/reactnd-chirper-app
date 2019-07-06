@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { formatTweet, formatDate } from '../utils/helpers'
-// import TiArrowBackOutline from 'react-icons/lib/ti/arrow-back-outline'
-import {TiHeartOutline} from 'react-icons/ti'
-import {TiHeartFullOutline} from 'react-icons/ti'
+import { TiArrowBackOutline } from 'react-icons/ti'
+import { TiHeartOutline } from 'react-icons/ti'
+import { TiHeartFullOutline } from 'react-icons/ti'
 
 class Tweet extends Component{
     toParent = (e,id) => {
@@ -19,7 +19,7 @@ class Tweet extends Component{
         }
 
         const {
-            name, avatar, timestamp, text, hasLiked, likes, replies, id, parent
+            name, avatar, timestamp, text, hasLiked, likes, replies, parent
         } = tweet
         console.log(this.props)
         return(
@@ -38,15 +38,15 @@ class Tweet extends Component{
                         </button>
                     )}
                     <p>{text}</p>
-                </div>
-                <div className="tweet-icons">
-                    <TiArrowBackOutline className="tweet-icon"/>
-                    <span>{replies !== 0 && replies} </span>
-                    <button className="heart-button" onClick={this.handleLike}>
-                        {hasLiked ? <TiHeartFullOutline color="#e0245e" className="tweet-icon"/>
-                         : <TiHeartOutline className="tweet-icon"/>}
-                    </button>
-                    <span>{likes !== 0 && likes}</span>
+                    <div className="tweet-icons">
+                        <TiArrowBackOutline className="tweet-icon"/>
+                        <span>{replies !== 0 && replies} </span>
+                        <button className="heart-button" onClick={this.handleLike}>
+                            {hasLiked ? <TiHeartFullOutline color="#e0245e" className="tweet-icon"/>
+                            : <TiHeartOutline className="tweet-icon"/>}
+                        </button>
+                        <span>{likes !== 0 && likes}</span>
+                    </div>
                 </div>
             </div>
         )
