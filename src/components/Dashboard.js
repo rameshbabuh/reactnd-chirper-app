@@ -8,11 +8,11 @@ class Dashboard extends Component{
             <div>
                 <h3 className="center">Your Timeline</h3>
                 <ul className="dashboard-list">
-                {this.props.tweetIds.map((id)=>(
-                    <li key={id}>
-                        <Tweet id={id}/>
-                    </li>
-                ))}
+                    {this.props.tweetIds.map((id)=>(
+                        <li key={id}>
+                            <Tweet id={id}/>
+                        </li>
+                    ))}
                 </ul>
             </div>
         )
